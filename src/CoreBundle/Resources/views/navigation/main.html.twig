@@ -1,0 +1,19 @@
+<!-- <li>
+    <a href="#">Aktuelles</a>
+</li>
+<li>
+    <a href="#">Blog</a>
+</li>-->
+<li>
+    <a href="#">Snippets</a>
+</li>
+<li>
+    <a href="#">Downloads</a>
+</li>
+{% if app.user %}
+    {% if is_granted('ROLE_SUPER_ADMIN') %}
+        <li>
+            <a href="#">Administration</a>
+        </li>
+    {% endif %}
+{% endif %}

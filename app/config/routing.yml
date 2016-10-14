@@ -1,0 +1,7 @@
+core:
+    resource: "@CoreBundle/Controller/"
+    type:     annotation
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,367 @@
+/*
+    Created on : 26.01.2015, 20:10:21
+    Author     : Viktor Schröder
+*/
+body, html {
+    height: 100%;
+}
+body {
+    background-color: #FFF;
+}
+
+a:focus, input:focus, button:focus, textarea:focus {
+    outline-width: 0;
+}
+
+/*
+Links
+*/
+a {
+    cursor: pointer;
+    color: #006699;
+    text-decoration: none;
+
+    -webkit-transition: background-color 0.1s linear,color 0.1s linear;
+    -moz-transition: background-color 0.1s linear,color 0.1s linear;
+    -ms-transition: background-color 0.1s linear,color 0.1s linear;
+    -o-transition: background-color 0.1s linear,color 0.1s linear;
+    transition: background-color 0.1s linear,color 0.1s linear;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #839BC9;
+    text-decoration: none;
+}
+
+a:visited {
+    cursor: pointer;
+    color: #005EAE;
+    text-decoration: none;
+}
+
+a:visited:hover {
+    cursor: pointer;
+    color: #839BC9;
+    text-decoration: none;
+}
+
+/*
+    Table TR Verlinkung
+*/
+tr[data-href]:hover{
+    cursor: pointer;
+}
+
+/*
+    Selection
+*/
+::-moz-selection {
+    background: #f2f2f2;
+    text-shadow: none;
+}
+
+::selection {
+    background: #f2f2f2;
+    text-shadow: none;
+}
+
+/*
+    Main
+*/
+main {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -410px auto;
+    padding: 54px 0 0 0;
+}
+
+/*
+    Effekte
+*/
+
+.vs-bgeffect {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid #006699;
+    border-bottom: 1px solid #006699;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+}
+
+.vs-bgeffect .center {
+    margin-top: 20px;
+}
+
+/*
+    Blog Tags
+*/
+
+.vs-tagging {
+
+}
+
+.vs-tagging ul {
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+.vs-tagging ul li:not(:last-child) {
+    margin-right: 4px;
+}
+
+.vs-tagging ul li {
+    display: inline-block;
+    margin: 2px 5px 5px 2px;
+    vertical-align: top;
+}
+
+.vs-tagging ul .tag, .vs-tagging ul input {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 2px 0 2px;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+    border-radius: 5px;
+    border: 1px solid #ccd6dd;
+    background-color: #FFF;
+    height: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.vs-tagging ul input {
+    margin-top: 0px !important;
+    padding: 4px 4px 4px 8px;
+}
+
+.vs-tagging ul .tag span {
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 4px 6px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    line-height: 16px;
+}
+
+.vs-tagging ul .tag a {
+    display: inline-block;
+    height: 16px;
+}
+
+.vs-tagging ul li .delete {
+    float: right;
+    padding: 0;
+    margin: 3px 2px 3px 0;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .3;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 16px;
+    height: 16px;
+    filter: alpha(opacity=30);
+}
+
+.vs-tagging ul li .delete span {
+    line-height: 13px;
+    margin: 0 !important;
+}
+
+.vs-tagging ul li .delete:hover, .vs-tagging ul li .delete:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .6;
+    filter: alpha(opacity=60);
+}
+
+/*
+    Footer
+*/
+
+footer {
+    width: 100%;
+    background-color: #fff;
+}
+
+footer, .vs-push {
+    height: 410px;
+}
+
+/******************************
+    Bootstrap 3 optimization
+*******************************/
+/* TODO: Modal verschiebung zum header ausgleichen */
+.modal-open {
+    overflow: auto !important;
+    padding-right: 0px !important;
+}
+
+/* Submenu Dropdown*/
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-submenu > a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #cccccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+.dropdown-submenu:hover > a:after {
+    border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left{
+    float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+@media (min-width: 768px) {
+    .navbar-right {
+        margin-right: 0px !important;
+    }
+}
+/*
+    Navigation Bar
+*/
+.navbar-default {
+    background-color:#fff;
+     border-bottom: 1px solid #e1e8ed;
+     border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-default::after {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    width: 100%;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .navbar-default .navbar-nav>li>a {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+
+        -webkit-transition: border-top-color 0.2s linear, border-bottom-color 0.2s linear;
+        -moz-transition: border-top-color 0.2s linear, border-bottom-color 0.2s linear;
+        -ms-transition: border-top-color 0.2s linear, border-bottom-color 0.2s linear;
+        -o-transition: border-top-color 0.2s linear, border-bottom-color 0.2s linear;
+        transition: border-top-color 0.2s linear, border-bottom-color 0.2s linear;
+    }
+    .navbar-default .navbar-nav>li>a:hover {
+        border-top: 1px solid #006699;
+        border-bottom: 1px solid #006699;
+        color: #006699;
+    }
+    .navbar-nav>li>button {
+        margin: 9px 0 9px 5px;
+    }
+}
+/* Mobile */
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav>li>a {
+        -webkit-transition: background-color 0.1s ease-in, color 0.1s linear;
+        -moz-transition: background-color 0.1s ease-in, color 0.1s linear;
+        -ms-transition: background-color 0.1s ease-in, color 0.1s linear;
+        -o-transition: background-color 0.1s ease-in, color 0.1s linear;
+        transition: background-color 0.1s ease-in, color 0.1s linear;
+    }
+    .navbar-default .navbar-nav>li>a:hover {
+        color: #FAFAFA;
+        background-color: #006699;
+    }
+    .navbar-nav>li>button {
+        width: 100%;
+    }
+}
+
+.glyphicon-text-underline:before {
+    content: "\e104";
+}
+
+/*
+    Flash Messages
+*/
+.alert {
+    padding: 5px !important;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: 0px !important;
+    right: 0px !important;
+    color: inherit;
+}
+
+/*
+    Form - Controls
+*/
+
+.input-group-addon.vs-min180 {
+    min-width: 180px;
+}
+
+/*
+    wysiwyg
+*/
+.wysiwyg-color-black {
+    color: #000000;
+}
+.wysiwyg-color-white {
+    color: #ffffff;
+}
+.wysiwyg-color-gray {
+    color: #9a9a9a;
+}
+.wysiwyg-color-red {
+    color: #cc2222;
+}
+.wysiwyg-color-purple {
+    color: #99235e;
+}
+.wysiwyg-color-green {
+    color: #60cc2a;
+}
+.wysiwyg-color-yellow {
+    color: #ffff00;
+}
+.wysiwyg-color-blue {
+    color: #006699;
+}
+.wysiwyg-color-orange {
+    color: #ff8d1c;
+}

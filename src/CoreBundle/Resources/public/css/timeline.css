@@ -1,0 +1,13 @@
+/*
+    Created on : 14.10.2016, 11:39:10
+    Author     : Viktor Schröder
+*/
+
+.timeline {
+    width: 100%;
+}
+
+.timeline .month-navigation {
+    width: 100%;
+    text-align: center;
+}
